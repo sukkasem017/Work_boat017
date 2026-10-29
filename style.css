@@ -1,0 +1,314 @@
+:root {
+  --primary-color: #0d3b66;     /* น้ำเงินกรมท่า */
+  --secondary-color: #b80000;   /* เลือดหมู/แดงวิทยาลัย */
+  --accent-color: #f4d35e;      /* เหลืองทอง */
+  --fb-color: #1877f2;          /* สีฟ้า Facebook */
+  --bg-color: #f8f9fa;
+  --text-color: #2b2d42;
+  --light-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 55px;          /* ปรับความกว้างของโลโก้ตามต้องการ */
+  height: 55px;         /* ปรับความสูงของโลโก้ตามต้องการ */
+  object-fit: contain;  /* รักษาสัดส่วนรูปไม่ให้เบี้ยว */
+  border-radius: 50%;   /* หากรูปโลโก้เป็นวงกลม หรือต้องการขอบมน (ถ้าเป็นรูปใส PNG ตัดส่วนนี้ออกได้ครับ) */
+  background-color: white; /* พื้นหลังขาวรองรับโลโก้ */
+  padding: 2px;         /* เว้นขอบนิดหน่อย */
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.title-area h1 {
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+.title-area p {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80') center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 5px solid var(--secondary-color);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #900000;
+}
+
+.btn-fb {
+  background-color: var(--fb-color);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
+}
+
+.btn-fb:hover {
+  opacity: 0.9;
+}
+
+/* Layout Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Cards & Grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--light-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-padding {
+  padding: 25px;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Timeline / History */
+.history-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.history-img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.course-badge {
+  background: #e1f5fe;
+  color: #0288d1;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Contact Box */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 4px solid var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-container, .history-content, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อเรา - วิทยาลัยเทคนิคนางรอง</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <img src="img/0001.jfif" alt="โลโก้วิทยาลัยเทคนิคนางรอง" class="logo-img">
+        <div class="title-area">
+          <h1>วิทยาลัยเทคนิคนางรอง</h1>
+          <p>Nangrong Technical College</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="computer.html">แผนกคอมพิวเตอร์</a></li>
+          <li><a href="courses.html">แผนกวิชาที่เปิดสอน</a></li>
+          <li><a href="history.html">ประวัติความเป็นมา</a></li>
+          <li><a href="contact.html" class="active">ติดต่อเรา</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">ช่องทางการติดต่อ</h2>
+
+    <div class="contact-container" style="margin-top: 30px;">
+      <div>
+        <h3 style="color: var(--primary-color); margin-bottom: 15px;">วิทยาลัยเทคนิคนางรอง</h3>
+        <p style="margin-bottom: 10px;"><strong>ที่อยู่:</strong> อ.นางรอง จ.บุรีรัมย์ 31110</p>
+        <p style="margin-bottom: 10px;"><strong>โทรศัพท์:</strong> 044-XXXXXX</p>
+        <p style="margin-bottom: 20px;"><strong>อีเมล:</strong> info@nangrong.ac.th</p>
+
+        <!-- ปุ่มกดไปเพจ Facebook -->
+        <h4 style="margin-bottom: 10px;">ติดตามข่าวสารผ่าน Facebook:</h4>
+        <a href="https://sites.google.com/view/computer-department-nrtech/" target="_blank" class="btn-fb">
+          <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          ไปยังเพจ Facebook วิทยาลัยฯ
+        </a>
+      </div>
+
+      <form onsubmit="alert('ส่งข้อความเรียบร้อยแล้ว!'); return false;">
+        <h3 style="color: var(--primary-color); margin-bottom: 15px;">ส่งข้อความถึงเรา</h3>
+        <div class="form-group">
+          <label for="name">ชื่อ-นามสกุล:</label>
+          <input type="text" id="name" required placeholder="ระบุชื่อของคุณ">
+        </div>
+        <div class="form-group">
+          <label for="email">อีเมล / เบอร์โทรศัพท์:</label>
+          <input type="text" id="email" required placeholder="ระบุช่องทางติดต่อกลับ">
+        </div>
+        <div class="form-group">
+          <label for="message">ข้อความ:</label>
+          <textarea id="message" rows="4" required placeholder="พิมพ์ข้อความที่ต้องการติดต่อสอบถาม"></textarea>
+        </div>
+        <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">ส่งข้อความ</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 วิทยาลัยเทคนิคนางรอง - Nangrong Technical College | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
